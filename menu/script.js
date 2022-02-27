@@ -35,7 +35,7 @@ function load() {
   folhaBTN.style.display = "none";
   gestaoBTN.style.display = "none";
 
-  fetch("https://aed-ponto.herokuapp.com/api/usuario/me", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/me", {
     method: "Get",
     headers: {
       Accept: "application/json",

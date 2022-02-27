@@ -9,7 +9,7 @@ const novoCargo = document.querySelector("#select");
 window.addEventListener("load", () => {
   var id = sessionStorage.getItem("ID");
 
-  fetch("https://aed-ponto.herokuapp.com/api/usuario/find?id=" + id, {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/find?id=" + id, {
     method: "Get",
     headers: {
       "Content-Type": "application/json",
@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 
 cadastrar
   .addEventListener("click", (e) => {
-    fetch("https://aed-ponto.herokuapp.com/api/usuario/edit", {
+    fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/edit", {
       method: "Post",
       headers: {
         "Content-Type": "application/json",

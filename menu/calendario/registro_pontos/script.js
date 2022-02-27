@@ -11,7 +11,7 @@ var selecionados = [];
 carregamentoInicial();
 
 async function retornCargo() {
-  fetch("https://aed-ponto.herokuapp.com/api/usuario/me", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/me", {
     method: "Get",
     headers: {
       Accept: "application/json",
@@ -32,7 +32,7 @@ async function retornCargo() {
 }
 
 function tabelaPontos() {
-  fetch("https://aed-ponto.herokuapp.com/api/ponto?data=" + data, {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/ponto?data=" + data, {
     method: "Get",
     headers: { Authorization: "Bearer " + localStorage.getItem("token") },
   })
@@ -119,7 +119,7 @@ function tabelaPontos() {
       } // for
     })
     .then(async function () {
-      fetch("https://aed-ponto.herokuapp.com/api/usuario/me", {
+      fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/me", {
         method: "Get",
         headers: {
           Accept: "application/json",
@@ -158,13 +158,16 @@ function carregamentoInicial() {
     dataTitulo.innerHTML = ` <h2>A data selecionada foi: ` + data + `</h2>`;
     sessionStorage.setItem("DATA", data);
 
-    fetch("https://aed-ponto.herokuapp.com/api/revisao_ponto?data=" + data, {
-      method: "Get",
-      headers: {
-        Accept: "application/json",
-        Authorization: "Bearer " + localStorage.getItem("token"),
-      },
-    })
+    fetch(
+      "https://aed-cargo-ponto.herokuapp.com/api/revisao_ponto?data=" + data,
+      {
+        method: "Get",
+        headers: {
+          Accept: "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      }
+    )
       .then((e) => e.json())
       .then(async (object) => {
         if (object.status == "APROVADO") {
@@ -209,7 +212,7 @@ function addPontos() {
     });
   });
 
-  fetch("https://aed-ponto.herokuapp.com/api/ponto?data=" + data, {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/ponto?data=" + data, {
     method: "Post",
     body: JSON.stringify(body),
     headers: {
@@ -242,7 +245,7 @@ function addRevisao() {
     status = "CADASTRADO";
   }
 
-  fetch("https://aed-ponto.herokuapp.com/api/revisao_ponto", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/revisao_ponto", {
     method: "Post",
     body: JSON.stringify({
       data: sessionStorage.getItem("DATA"),

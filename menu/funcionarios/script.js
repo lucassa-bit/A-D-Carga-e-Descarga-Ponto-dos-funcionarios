@@ -5,18 +5,21 @@ cadastrarBTN.addEventListener("click", (e) => {
 });
 
 function deleteFuncionarioById(id) {
-  fetch("https://aed-ponto.herokuapp.com/api/funcionario/delete?id=" + id, {
-    method: "Post",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem("token"),
-    },
-  }).then((e) => loadFuncionarios());
+  fetch(
+    "https://aed-cargo-ponto.herokuapp.com/api/funcionario/delete?id=" + id,
+    {
+      method: "Post",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    }
+  ).then((e) => loadFuncionarios());
 }
 
 function loadFuncionarios() {
   document.querySelector(".listaFuncionarios").innerHTML = "";
-  fetch("https://aed-ponto.herokuapp.com/api/funcionario", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/funcionario", {
     method: "Get",
     headers: {
       mode: "no-cors",
