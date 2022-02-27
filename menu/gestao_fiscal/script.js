@@ -5,7 +5,7 @@ cadastrarBTN.addEventListener("click", (e) => {
 });
 
 function deleteFuncionarioById(id) {
-  fetch("https://aed-ponto.herokuapp.com/api/usuario/delete?id=" + id, {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario/delete?id=" + id, {
     method: "Post",
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ function deleteFuncionarioById(id) {
 
 function loadFuncionarios() {
   document.querySelector(".listaFuncionarios").innerHTML = "";
-  fetch("https://aed-ponto.herokuapp.com/api/usuario", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario", {
     method: "Get",
     headers: {
       mode: "no-cors",

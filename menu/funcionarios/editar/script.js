@@ -21,7 +21,8 @@ window.addEventListener("load", () => {
   var id = sessionStorage.getItem("ID");
 
   fetch(
-    "https://aed-ponto.herokuapp.com/api/funcionario/find?idEmpregado=" + id,
+    "https://aed-cargo-ponto.herokuapp.com/api/funcionario/find?idEmpregado=" +
+      id,
     {
       method: "Get",
       headers: {
@@ -84,7 +85,7 @@ select.addEventListener("change", (e) => {
 });
 
 cadastrarBTN.addEventListener("click", (e) => {
-  fetch("https://aed-ponto.herokuapp.com/api/funcionario/edit", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/funcionario/edit", {
     method: "Post",
     headers: {
       "Content-Type": "application/json",

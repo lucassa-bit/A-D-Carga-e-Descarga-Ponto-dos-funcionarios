@@ -47,7 +47,7 @@ cadastrarBTN.addEventListener("click", (e) => {
     var resultado = "DIARISTA";
   }
   const pagamento = select.options[select.selectedIndex].value;
-  fetch("https://aed-ponto.herokuapp.com/api/funcionario", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/funcionario", {
     method: "Post",
     headers: {
       "Content-Type": "application/json",

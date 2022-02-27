@@ -59,7 +59,7 @@ function novoHref(novaData) {
 
 async function pegaStatus(diaInicial, diaFinal, mes, ano) {
   return fetch(
-    "https://aed-ponto.herokuapp.com/api/revisao_ponto/range?dataInicial=" +
+    "https://aed-cargo-ponto.herokuapp.com/api/revisao_ponto/range?dataInicial=" +
       diaInicial +
       "/" +
       mes +
