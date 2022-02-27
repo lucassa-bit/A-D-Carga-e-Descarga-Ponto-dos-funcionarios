@@ -12,7 +12,7 @@ cadastrar.addEventListener("click", (e) => {
   const novoNome = document.querySelector(".novoNome").value;
   const novoCargo = select.options[select.selectedIndex].value;
 
-  fetch("https://aed-ponto.herokuapp.com/api/usuario", {
+  fetch("https://aed-cargo-ponto.herokuapp.com/api/usuario", {
     method: "Post",
     headers: {
       "Content-Type": "application/json",
