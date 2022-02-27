@@ -109,6 +109,6 @@ cadastrarBTN.addEventListener("click", (e) => {
     }),
   }).then(async () => {
     sessionStorage.removeItem("ID");
-    window.location.href = "../index.html";
+    window.location.href = "./../index.html";
   });
 });

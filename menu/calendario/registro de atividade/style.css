@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #0AA695;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data input {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.botoes a {
+    width: 100px;
+    text-align: center;
+}
+
+.salvarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.voltarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+
+/* innerHTML */
+
+.main2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titulos {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.titulos .h3_1 {
+    margin-right: 60px;
+}
+
+.h3_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.h3_2 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.lista_funcionarios {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.lista_funcionarios h4 {
+    display: flex;
+    align-self: flex-end;
+    font-size: 20px;
+}
+
+.lista_funcionarios input {
+    padding: 5px;
+}
+
+.checkbox {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+.nome_funcionario {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 0;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.aprovar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.aprovar h3 {
+    margin-left: 5px;
+}
+
+.revisar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.revisar h3 {
+    margin-left: 5px;
+}
+
+.textoRevisao textarea {
+    width: 300px;
+    height: 150px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.informacoesExtras {
+    box-shadow: 0 0 2em rgb(12, 10, 1);
+    margin-top: 20px;
+}
+
+
+/* input[class=horaExtra50] {
+    pointer-events: none;
+} */
+
+@media screen and (max-width: 913px) {
+    .titulo {
+        text-align: center;
+        margin: 50px;
+    }
+    .main2 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .titulos {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 5px;
+        font-size: 12px;
+        margin-right: 30px;
+    }
+    .titulos .h3_1 {
+        margin-right: 10px;
+    }
+    .h3_1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .h3_2 {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+    }
+    .lista_funcionarios {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-right: 30px;
+    }
+    .lista_funcionarios input {
+        padding: 3px;
+        width: 90px;
+    }
+    .checkbox {
+        transform: scale(1.3);
+    }
+    .nome_funcionario {
+        margin-right: 10px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    .informacoesExtras {
+        box-shadow: 0 0 2em rgb(12, 10, 1);
+        margin-top: 20px;
+    }
+}

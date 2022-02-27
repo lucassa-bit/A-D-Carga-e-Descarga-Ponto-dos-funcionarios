@@ -42,5 +42,5 @@ cadastrar
   })
   .then(async () => {
     sessionStorage.removeItem("ID");
-    window.location.href = "../index.html";
+    window.location.href = "./../index.html";
   });

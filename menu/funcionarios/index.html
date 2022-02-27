@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../../imagens/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>A&D Carga e Descarga - Ponto dos funcionários</title>
 </head>
 
@@ -20,22 +20,12 @@
             <a class="voltarBTN" style="cursor: pointer">Voltar</a>
         </div>
     </section>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
     <script>
         const voltar = document.querySelector(".voltarBTN");
 
         voltar.addEventListener("click", (e) => {
-            fetch("https://aed-ponto.herokuapp.com/api/usuario/me", {
-                    method: "Get",
-                    headers: {
-                        Accept: "application/json",
-                        Authorization: "Bearer " + localStorage.getItem("token"),
-                    },
-                })
-                .then((response) => response.json())
-                .then((usuario) => {
-                    window.location.href = "./../";
-                });
+            window.location.href = "./../index.html";
         });
     </script>
 </body>

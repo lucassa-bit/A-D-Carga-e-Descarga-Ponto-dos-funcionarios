@@ -4,7 +4,34 @@ const folhaBTN = document.querySelector(".folhaBTN");
 const gestaoBTN = document.querySelector(".gestaoBTN");
 const sairBTN = document.querySelector(".botaoSair");
 
+if (localStorage.getItem("token") == null) {
+  window.location.href = "../index.html";
+}
+
+funcionariosBTN.addEventListener("click", (e) => {
+  window.location.href = "./funcionarios/index.html";
+});
+
+registroBTN.addEventListener("click", (e) => {
+  window.location.href = "./calendario/index.html";
+});
+
+folhaBTN.addEventListener("click", (e) => {
+  window.location.href = "./folha/index.html";
+});
+
+gestaoBTN.addEventListener("click", (e) => {
+  window.location.href = "./gestao_fiscal/index.html";
+});
+
+sairBTN.addEventListener("click", (e) => {
+  window.location.href = "./../index.html";
+});
+
 function load() {
+  const folhaBTN = document.querySelector(".folhaBTN");
+  const gestaoBTN = document.querySelector(".gestaoBTN");
+
   folhaBTN.style.display = "none";
   gestaoBTN.style.display = "none";
 
@@ -27,27 +54,3 @@ function load() {
 }
 
 load();
-
-if (localStorage.getItem("token") == null) {
-  window.location.href = "../";
-}
-
-funcionariosBTN.addEventListener("click", (e) => {
-  window.location.href = "./funcionarios";
-});
-
-registroBTN.addEventListener("click", (e) => {
-  window.location.href = "./calendario";
-});
-
-folhaBTN.addEventListener("click", (e) => {
-  window.location.href = "./folha";
-});
-
-gestaoBTN.addEventListener("click", (e) => {
-  window.location.href = "./gestao_fiscal";
-});
-
-sairBTN.addEventListener("click", (e) => {
-  window.location.href = "./..";
-});

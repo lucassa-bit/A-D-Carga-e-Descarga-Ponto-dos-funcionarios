@@ -21,26 +21,26 @@ async function criaDias() {
   );
   for (let index = 0; index < status.length; index++) {
     var statusIndex = status[index];
-    var mudaCor = "naoCadastrado";
+    var mudaCor = "#ebebeb";
     if (statusIndex.status == "APROVADO") {
-      mudaCor = "aprovado";
+      mudaCor = "#60f768";
     } else if (statusIndex.status == "REVISAO") {
-      mudaCor = "revisao";
+      mudaCor = "#f76060";
     } else if (statusIndex.status == "CADASTRADO") {
-      mudaCor = "cadastrado";
+      mudaCor = "#f2f760";
     }
 
     calendario.innerHTML += `
-    <div class="divDatas">
-        <a class = ${mudaCor} style="cursor: pointer;" onclick="redirecionarParaPonto(${
+    <div class="divDatas" style="background-color: ${mudaCor};" style="cursor: pointer;" onclick="novoHref(${
       index + 1
-    })">${index + 1}</a>
+    })">
+        <a>${index + 1}</a>
     </div>
 `;
   }
 }
 
-function redirecionarParaPonto(novaData) {
+function novoHref(novaData) {
   const data = mes.value.split("-");
   let dia = novaData + "";
   if (Number(novaData) < 10) {
@@ -48,7 +48,12 @@ function redirecionarParaPonto(novaData) {
   }
 
   window.location.href =
-    "./registro_ponto/index.html?data=" + dia + "/" + data[1] + "/" + data[0];
+    "./registro de atividade/index.html?data=" +
+    dia +
+    "/" +
+    data[1] +
+    "/" +
+    data[0];
   console.log(novaData);
 }
 
