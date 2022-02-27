@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #0AA695;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.inputs input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#select {
+    padding: 5px;
+}
+
+#select option {
+    font-size: 16px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastrarBTN input {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.sairBTN a {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}

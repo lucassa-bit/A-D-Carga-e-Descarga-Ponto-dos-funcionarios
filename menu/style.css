@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #0AA695;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.botoes a {
+    width: 200px;
+    text-align: center;
+}
+
+.funcionariosBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.registroBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.folhaBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.gestaoBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.botaoSair a {
+    padding: 20px;
+    background-color: #0AA695;
+    color: whitesmoke;
+    border-radius: 10px;
+    margin-top: -200px;
+}

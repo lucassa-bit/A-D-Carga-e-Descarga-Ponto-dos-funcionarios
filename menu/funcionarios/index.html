@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../imagens/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>A&D MP - Ponto dos funcionários</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Lista de funcionários cadastrados:</h1>
+    </div>
+    <section class="main">
+        <div class="listaFuncionarios"></div>
+        <div class="botoes">
+            <a class="cadastrarBTN" href="#">Cadastrar</a>
+            <a class="voltarBTN" style="cursor: pointer">Voltar</a>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+    <script>
+        const voltar = document.querySelector(".voltarBTN");
+
+        voltar.addEventListener("click", (e) => {
+            fetch("https://flash-point-app.herokuapp.com/api/usuario/me", {
+                    method: "Get",
+                    headers: {
+                        Accept: "application/json",
+                        Authorization: "Bearer " + localStorage.getItem("token"),
+                    },
+                })
+                .then((response) => response.json())
+                .then((usuario) => {
+                    window.location.href = "./../";
+                });
+        });
+    </script>
+</body>
+
+</html>

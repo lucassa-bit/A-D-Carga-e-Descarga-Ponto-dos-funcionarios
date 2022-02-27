@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #0AA695;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin: 50px 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.botoes a {
+    width: 200px;
+    text-align: center;
+}
+
+.cadastrarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.voltarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+/* innerHTML */
+
+.lista_funcionarios {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+}
+
+.deletarInput {
+    margin-left: 20px;
+    padding: 3px;
+}
+
+@media screen and (max-width: 913px) {
+    .titulo {
+        text-align: center;
+        margin: 50px 10px;
+        font-size: 14px;
+    }
+    .listaFuncionarios {
+        margin-left: 20px;
+    }
+    /* innerHTML */
+    .lista_funcionarios {
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+    }
+    .deletarInput {
+        margin-left: 10px;
+        padding: 3px;
+        border-radius: 10px;
+    }
+}

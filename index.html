@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <script src="./checkToken.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <title>A&D MP - Ponto dos funcionários</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="logo">
+            <img src="./imagens/semfundo.png" alt=" logo da empresa " />
+        </div>
+        <div class="inputs">
+            <div class="login">
+                <h2>LOGIN</h2>
+                <input class="inputLogin" type="text" placeholder="Digite o login aqui " style="color: black" />
+            </div>
+            <div class="senha">
+                <h2>SENHA</h2>
+                <input class="inputSenha" type="password" placeholder="digite a senha aqui " style="color: black" />
+            </div>
+            <div class="entrar">
+                <a class="botao" href="#">Entrar</a>
+            </div>
+        </div>
+    </section>
+    <!-- Android Viewport height fix-->
+    <script type="text/javascript">
+        var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+        if (isAndroid) {
+            document.write(
+                '<meta name="viewport" content="width=device-width,height=' +
+                window.innerHeight +
+                ', initial-scale=1.0">'
+            );
+        }
+    </script>
+    <script src="./script.js " defer></script>
+</body>
+
+</html>

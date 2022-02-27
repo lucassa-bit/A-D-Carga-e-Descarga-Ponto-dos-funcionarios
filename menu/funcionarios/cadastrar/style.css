@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: #0AA695;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.titulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: -100px;
+}
+
+.inputsContainer {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    padding: 30px;
+}
+
+.contaPagamento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: -100px;
+}
+
+.inputsContainer h2 {
+    margin-right: 10px;
+}
+
+.inputsContainer input {
+    padding: 10px;
+    color: black;
+    width: 490px;
+}
+
+select {
+    padding: 10px;
+}
+
+select option {
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+}
+
+.botoes a {
+    width: 200px;
+    text-align: center;
+}
+
+.cadastrarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.voltarBTN {
+    background-color: #0AA695;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 913px) {
+    .titulo {
+        text-align: center;
+        margin: 30px 20px;
+        font-size: 14px;
+    }
+    .titulo h2 {
+        margin-top: 10px;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: -40px;
+    }
+    .inputsContainer {
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+        padding: 10px;
+        font-size: 12px;
+        justify-content: center;
+    }
+    .inputsContainer input {
+        max-width: 250px;
+    }
+    .selectVinculo {
+        width: 250px !important;
+    }
+    /*  .vinculoInput {
+        width: 140px !important;
+    } */
+    .select {
+        width: 250px !important;
+    }
+    .pagamentoInput {
+        width: 170px !important;
+    }
+}

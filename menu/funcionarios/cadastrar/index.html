@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../../imagens/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>A&D MP - Ponto dos funcionários</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Cadastrar novo funcionário</h1>
+    </div>
+    <section class="main">
+        <div class="container">
+            <div class="inputsContainer">
+                <h2>Nome</h2>
+                <input class="nome" type="text" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>Cargo</h2>
+                <input class="cargo" type="text" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>Vinculo</h2>
+                <select class="selectVinculo" name="select" style="width: 490px">
+            <option value="LIDER">Líder</option>
+            <option value="CLT">CLT</option>
+            <option value="MEI">MEI</option>
+            <option value="FLUTUANTE">Flutuante</option>
+            <option value="DIARISTA">Diarista</option>
+          </select>
+            </div>
+            <div class="inputsContainer">
+                <h2>Valor</h2>
+                <input class="valor" type="text" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>RG</h2>
+                <input class="RG" type="number" onkeypress="return onlynumber();" placeholder="Apenas números" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>CPF</h2>
+                <input class="CPF" type="text" placeholder="Apenas números" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>Celular</h2>
+                <input class="celular" type="text" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>Pis</h2>
+                <input class="pis" type="number" onkeypress="return onlynumber();" placeholder="Apenas números" required />
+            </div>
+            <div class="inputsContainer">
+                <h2>Pagamento</h2>
+                <!--  <input class="pagamentoInput" type="text" style="width: 410px" required /> -->
+                <select class="select" name="select" style="width: 490px">
+            <option value="PIX">Pix</option>
+            <option class="contaSelect" value="CONTA">Conta</option>
+          </select>
+            </div>
+            <div class="inputsContainer" id="pagamentoPix" required>
+                <h2>Pix</h2>
+                <input class="pix" type="text" />
+            </div>
+            <div class="contaPagamento" style="display: none">
+                <div class="inputsContainer">
+                    <h2>Banco</h2>
+                    <input class="banco" type="text" required />
+                </div>
+                <div class="inputsContainer">
+                    <h2>Agência</h2>
+                    <input class="agencia" type="text" required />
+                </div>
+                <div class="inputsContainer">
+                    <h2>Conta</h2>
+                    <input class="conta" type="text" required />
+                </div>
+                <div class="inputsContainer">
+                    <h2>Operação</h2>
+                    <input class="operacao" type="text" required />
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="botoes">
+        <a class="cadastrarBTN" href="#">Cadastrar</a>
+        <a class="voltarBTN" href="../">Voltar</a>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        function onlynumber(evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+            //var regex = /^[0-9.,]+$/;
+            var regex = /^[0-9.]+$/;
+            if (!regex.test(key)) {
+                theEvent.returnValue = false;
+                if (theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+    </script>
+</body>
+
+</html>
