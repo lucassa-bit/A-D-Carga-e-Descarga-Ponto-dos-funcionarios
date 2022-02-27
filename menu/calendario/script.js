@@ -48,13 +48,12 @@ function novoHref(novaData) {
   }
 
   window.location.href =
-    "./registro de atividade/index.html?data=" +
+    "./registros_pontos/index.html?data=" +
     dia +
     "/" +
     data[1] +
     "/" +
     data[0];
-  console.log(novaData);
 }
 
 async function pegaStatus(diaInicial, diaFinal, mes, ano) {
