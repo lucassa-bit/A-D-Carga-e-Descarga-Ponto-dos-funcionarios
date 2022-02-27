@@ -36,7 +36,7 @@ select.addEventListener("change", (e) => {
 });
 
 cadastrarBTN.addEventListener("click", (e) => {
-  fetch("https://flash-point-app.herokuapp.com/api/funcionario", {
+  fetch("https://aed-ponto.herokuapp.com/api/funcionario", {
     method: "Get",
     headers: {
       "Content-Type": "application/json",
@@ -71,7 +71,7 @@ cadastrarBTN.addEventListener("click", (e) => {
         )[0].id;
         console.table(idUsuario);
 
-        fetch("https://flash-point-app.herokuapp.com/api/funcionario/edit", {
+        fetch("https://aed-ponto.herokuapp.com/api/funcionario/edit", {
           mode: "no-cors",
           method: "Put",
           headers: {
@@ -113,7 +113,7 @@ cadastrarBTN.addEventListener("click", (e) => {
           var resultado = "DIARISTA";
         }
         const pagamento2 = select.options[select.selectedIndex].value;
-        fetch("https://flash-point-app.herokuapp.com/api/funcionario", {
+        fetch("https://aed-ponto.herokuapp.com/api/funcionario", {
           method: "Post",
           headers: {
             "Content-Type": "application/json",

@@ -12,7 +12,7 @@ function exportar() {
     return;
   }
 
-  fetch("https://flash-point-app.herokuapp.com/api/relatorio/token", {
+  fetch("https://aed-ponto.herokuapp.com/api/relatorio/token", {
     method: "Get",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function exportar() {
         dataFinal = diaFinal + "/" + data;
       }
 
-      var url = `https://flash-point-app.herokuapp.com/api/relatorio`;
+      var url = `https://aed-ponto.herokuapp.com/api/relatorio`;
       url += `?data_inicial=${dataInicial}`;
       url += `&data_final=${dataFinal}`;
       url += `&temporaryToken=${token}`;
@@ -89,7 +89,7 @@ function buildFuncionarios(selectAll) {
 }
 
 function loadFuncionarios() {
-  fetch("https://flash-point-app.herokuapp.com/api/funcionario", {
+  fetch("https://aed-ponto.herokuapp.com/api/funcionario", {
     method: "Get",
     headers: {
       "Content-Type": "application/json",

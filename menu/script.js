@@ -5,26 +5,25 @@ const gestaoBTN = document.querySelector(".gestaoBTN");
 const sairBTN = document.querySelector(".botaoSair");
 
 function load() {
+  folhaBTN.style.display = "none";
+  gestaoBTN.style.display = "none";
 
-  folhaBTN.style.display = 'none';
-  gestaoBTN.style.display = 'none';
-
-  fetch("https://flash-point-app.herokuapp.com/api/usuario/me", {
+  fetch("https://aed-ponto.herokuapp.com/api/usuario/me", {
     method: "Get",
     headers: {
-        Accept: "application/json",
-        Authorization: "Bearer " + localStorage.getItem("token"),
+      Accept: "application/json",
+      Authorization: "Bearer " + localStorage.getItem("token"),
     },
   })
-  .then((response) => response.json())
-  .then((usuario) => {
+    .then((response) => response.json())
+    .then((usuario) => {
       if (usuario.cargo == "ADMIN") {
-        folhaBTN.style.display = 'block';
-        gestaoBTN.style.display = 'block';
-      } else if(usuario.cargo == "LIDER") {
-        folhaBTN.style.display = 'block';
+        folhaBTN.style.display = "block";
+        gestaoBTN.style.display = "block";
+      } else if (usuario.cargo == "LIDER") {
+        folhaBTN.style.display = "block";
       }
-  });
+    });
 }
 
 load();
