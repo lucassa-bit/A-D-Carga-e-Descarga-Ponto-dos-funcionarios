@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../../../imagens/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../confirmar/confirmar.css" />
     <title>A&D Carga e Descarga - Ponto dos funcionários</title>
 </head>
 
@@ -34,7 +35,7 @@
           </select>
             </div>
             <div class="inputsContainer">
-                <h2>Valor</h2>
+                <h2 id="pagamentoTexto"></h2>
                 <input class="valor" type="text" required />
             </div>
             <div class="inputsContainer">
@@ -87,9 +88,11 @@
     </section>
     <div class="botoes">
         <a class="cadastrarBTN" href="#">Cadastrar</a>
-        <a class="voltarBTN" href="./../index.html">Voltar</a>
+        <a class="voltarBTN" onclick="window.location.href = '../index.html'"  style="cursor: pointer">voltar</a>
     </div>
     <script src="script.js"></script>
+    <script src="../../confirmar/confirmar.js"></script>
+
     <script>
         function onlynumber(evt) {
             var theEvent = evt || window.event;
