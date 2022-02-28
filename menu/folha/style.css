@@ -46,16 +46,11 @@ body {
 }
 
 .dataFinal h2 {
-    margin-bottom: 8px;
-}
-
-.dataFinal select {
-    margin-bottom: 1px;
+    margin-bottom: 4px;
 }
 
 .dataFinal select {
     max-width: 250px;
-    margin-top: 5px;
     text-align: center;
 }
 
@@ -131,7 +126,7 @@ body {
     }
     .dataFinal select {
         max-width: 150px;
-        margin-top: 5px;
+        margin-top: 0px;
         text-align: center;
     }
 }
