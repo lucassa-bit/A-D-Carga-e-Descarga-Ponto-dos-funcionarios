@@ -24,10 +24,6 @@ gestaoBTN.addEventListener("click", (e) => {
   window.location.href = "./gestao_fiscal/index.html";
 });
 
-sairBTN.addEventListener("click", (e) => {
-  window.location.href = "./../index.html";
-});
-
 function load() {
   const folhaBTN = document.querySelector(".folhaBTN");
   const gestaoBTN = document.querySelector(".gestaoBTN");

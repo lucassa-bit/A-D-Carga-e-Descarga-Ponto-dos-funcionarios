@@ -91,14 +91,14 @@ function tabelaPontos() {
                 listaFuncionarios.appendChild(input100);
                 var nome = val.empregado.nome.split(" ")
                 nomeFuncionario.innerHTML +=
-                    (nome.length >= 2 ? nome[0] + " " + nome[1] : nome[0]) + 
+                    (nome.length >= 2 ? nome[0] + " " + nome[1] : nome[0]) +
                     `
                 <div class="informacoesExtras" style="display: none;">
                     <h4>Nome: ` +
-                        val.empregado.nome +
+                    val.empregado.nome +
                     `</h4>
                     <h4>Cargo: ` +
-                        val.empregado.cargo +
+                    val.empregado.cargo +
                     `</h4>
                 </div>`;
                 document.querySelector(".innerHTML").appendChild(main2);
@@ -212,15 +212,24 @@ function carregamentoInicial() {
 }
 
 salvarBTN.addEventListener("click", (e) => {
-    if (sessionStorage.getItem("ACESSO") == "LIDER") {
-        addPontos();
-        addRevisao();
-    } else if (sessionStorage.getItem("ACESSO") == "APONTADOR") {
-        addRevisao();
-    } else if (sessionStorage.getItem("ACESSO") == "ADMIN") {
-        addPontos();
-        addRevisao();
-    }
+    Confirm.open({
+        title: 'Cadastrar informações',
+        message: 'As informações passadas estão de acordo?',
+        okText: 'Sim',
+        cancelText: 'Deixe me revisar',
+        onOk: () => {
+            if (sessionStorage.getItem("ACESSO") == "LIDER") {
+                addPontos();
+                addRevisao();
+            } else if (sessionStorage.getItem("ACESSO") == "APONTADOR") {
+                addRevisao();
+            } else if (sessionStorage.getItem("ACESSO") == "ADMIN") {
+                addPontos();
+                addRevisao();
+            }
+        },
+        onCancel: () => {}
+    });
 });
 
 function addPontos() {

@@ -1,0 +1,125 @@
+.confirmar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    animation-name: confirmar--open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmar__close {
+    animation-name: confirmar--close;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.confirmar__window {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirmar__window--open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2;
+}
+
+.confirmar__titlebar,
+.confirmar__content,
+.confirmar__buttons {
+    padding: 1.25em ;
+}
+
+.confirmar__title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.confirmar__close {
+    background: none;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    transition: color 0.15s;
+}
+
+.confirmar__close:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.confirmar__content {
+    line-height: 1.8em;
+}
+
+.confirmar__buttons {
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirmar__button {
+    padding: 0.4em 0.8em;
+    border: 2px solid #0AA695;
+    background: #ffffff;
+    color: #0AA695;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    margin-left: 0.6em;
+    cursor: pointer;
+    outline: none;
+}
+
+.confirmar__button--fill {
+    background: #0AA695;
+    color: #ffffff;
+}
+
+.confirmar__button:focus {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.confirmar__titlebar {
+    background: #222222;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes confirmar--open {
+    from { opacity: 0 }
+    to { opacity: 1}
+}
+
+@keyframes confirmar--close {
+    from { opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes confirmar__window--open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
