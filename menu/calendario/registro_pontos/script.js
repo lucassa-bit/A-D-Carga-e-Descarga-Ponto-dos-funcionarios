@@ -117,22 +117,15 @@ function tabelaPontos() {
                 theme: 'cyan',
                 lang: 'pt',
             });
-            for (let index = 1; index < valor1.length; index++) {
-                const element = valor1.item(index);
-                timepicker.setTarget(element);
-                timepicker.on('change', function(evt) {
-                    var value = (evt.hour || '00') + ':' + (evt.minute || '00');
-                    evt.element.value = value;
-                });
-            }
-            for (let index = 0; index < valor2.length; index++) {
-                const element = valor2.item(index);
-                timepicker.setTarget(element);
-                timepicker.on('change', function(evt) {
-                    var value = (evt.hour || '00') + ':' + (evt.minute % 15 == 0 ? evt.minute : '00' || '00');
-                    evt.element.value = value;
-                });
-            }
+            timepicker.on('change', calendario);
+            
+            valor1.forEach(function(n, k, f) {
+                timepicker.setTarget(n);
+            });
+
+            valor2.forEach(function(n, k, f) {
+                timepicker.setTarget(n);
+            });
 
             var nomesFuncionarios = document.querySelectorAll(".nome_funcionario");
             for (var i = 0; i < nomesFuncionarios.length; i++) {
@@ -306,4 +299,10 @@ function onClickFuncionarioCheckbox(id, element) {
     } else {
         selecionados = selecionados.filter((e) => e !== id);
     }
+}
+
+function calendario(evt) {
+    var value = (evt.hour || '00') + ':' + (evt.minute % 15 == 0 ? evt.minute : '00' || '00');
+                    evt.element.value = value;
+    evt.element.value = value;
 }
