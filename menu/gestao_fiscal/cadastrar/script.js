@@ -28,8 +28,8 @@ cadastrar.addEventListener("click", (e) => {
                             cargo: novoCargo,
                         }),
                     })
-                    .then((e) => {
-                        if (e.status != 200) {
+                    .then(async (e) => {
+                        if (e.status != 200 && e.status != 201) {
                             throw "usuario não cadastrado devido a um error nas informações";
                         }
                     })

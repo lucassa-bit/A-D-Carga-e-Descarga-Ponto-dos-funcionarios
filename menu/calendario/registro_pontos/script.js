@@ -208,12 +208,12 @@ salvarBTN.addEventListener("click", (e) => {
         onOk: () => {
             if (sessionStorage.getItem("ACESSO") == "LIDER") {
                 addPontos();
-                addRevisao();
+                addRevisao(true);
             } else if (sessionStorage.getItem("ACESSO") == "APONTADOR") {
-                addRevisao();
+                addRevisao(false);
             } else if (sessionStorage.getItem("ACESSO") == "ADMIN") {
                 addPontos();
-                addRevisao();
+                addRevisao(false);
             }
         },
         onCancel: () => {}
@@ -254,7 +254,7 @@ function addPontos() {
     }).then((response) => response);
 }
 
-function addRevisao() {
+function addRevisao(isLider) {
     var checkAprovado = document.querySelector(".aprovarCheckbox").checked;
     var checkRevisao = document.querySelector(".revisarCheckbox").checked;
     var status = "";
@@ -265,12 +265,12 @@ function addRevisao() {
         throw "Selecionar uma das duas opções para salvar";
     }
 
-    if (checkAprovado) {
+    if(isLider) {
+        status = "CADASTRADO";
+    } else if (checkAprovado) {
         status = "APROVADO";
     } else if (checkRevisao) {
         status = "REVISAO";
-    } else {
-        status = "CADASTRADO";
     }
 
     fetch("https://aed-cargo-ponto.herokuapp.com/api/revisao_ponto", {
